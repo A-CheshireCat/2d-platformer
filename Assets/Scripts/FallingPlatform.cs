@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+
 public class FallingPlatform : MonoBehaviour
 {
     [SerializeField] float fallingTime = 2.0f;

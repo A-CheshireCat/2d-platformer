@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+
 public class Collectible : MonoBehaviour
 {
     [SerializeField] public int collectibleScore = 1;
@@ -10,12 +12,17 @@ public class Collectible : MonoBehaviour
 
     private int randomTypesNr = 3;
     private Animator animator;
+    private GameManager gameManager;
 
     protected void Awake() {
         animator = GetComponent<Animator>();
     }
 
     protected void Start() {
+        gameManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<GameManager>();
+        if (gameManager.userData.currentCheckpointLocation != null && (gameManager.userData.currentCheckpointLocation.x > gameObject.transform.position.x)) {
+            DestroyCollectible();
+        }
         if (isCollectibleTypeRandom) {
             collectibleType = Random.Range(0, randomTypesNr + 1);
         }
@@ -23,6 +30,7 @@ public class Collectible : MonoBehaviour
     }
 
     public void StartAnimation() {
+        GetComponent<CircleCollider2D>().enabled = false;
         animator.SetTrigger("Collected");
     }
 

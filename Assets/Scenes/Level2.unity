@@ -479,6 +479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3486259060230306053, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -41726,6 +41730,10 @@ PrefabInstance:
       value: MovingPlatform (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: cyclical
       value: 1
       objectReference: {fileID: 0}
@@ -41860,6 +41868,10 @@ PrefabInstance:
     - target: {fileID: 3486259059595239247, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: m_Name
       value: MovingPlatform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: cyclical

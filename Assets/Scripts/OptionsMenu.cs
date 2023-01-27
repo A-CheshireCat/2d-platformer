@@ -11,7 +11,6 @@ public class OptionsMenu : MonoBehaviour
     public Slider mainVolSlider;
     public Slider musicVolSlider;
     public Slider effectsVolSlider;
-
     public Toggle fullscreenToggle;
 
     public AudioMixer audioMixer;
