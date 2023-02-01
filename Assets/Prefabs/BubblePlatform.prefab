@@ -57,11 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486259059595239247, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: m_Name
-      value: Bubble Variant
+      value: BubblePlatform
       objectReference: {fileID: 0}
     - target: {fileID: 3486259059957792818, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: destroyAtEnd
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3486259059957792819, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
       propertyPath: m_Size.x
@@ -109,6 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8165881807891611250, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
+    - {fileID: 2310610115349042962, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a98e51a3b3ac5e24eab3644b1edb24ca, type: 3}
 --- !u!1 &5438343791830854083 stripped
 GameObject:

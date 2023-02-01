@@ -11,7 +11,8 @@ public class Spawner : MonoBehaviour
     private bool isSpawning;
 
     protected void FixedUpdate() {
-        if (transform.childCount < maxNrOfItems && !isSpawning) {
+        // Will always have the bubbe effects child so +1
+        if (transform.childCount < maxNrOfItems + 1 && !isSpawning) {
             isSpawning = true;
             Invoke("SpawnItem", spawnTime);
         }
