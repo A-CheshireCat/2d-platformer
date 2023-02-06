@@ -9,8 +9,9 @@ public class PlayerWaterController : PlayerController
     [SerializeField] private float isWetTimer = 4.0f;
     protected AudioClip hitWater;
 
-    private bool isInWater = false;
-    protected bool IsInWater {
+    //private
+    public bool isInWater = false;
+    public bool IsInWater {
         get { return isInWater; }
         set {
             if (isInWater != value) {
@@ -25,9 +26,11 @@ public class PlayerWaterController : PlayerController
             }
         }
     }
-    private bool canLaunchFromWater;
+    //private
+    public bool canLaunchFromWater;
     public bool isWet;
-    private float isWetCountDown;
+    //private
+    public float isWetCountDown;
 
     protected float defaultMoveSpeed;
     protected float defaultJumpForce;
@@ -119,8 +122,17 @@ public class PlayerWaterController : PlayerController
         if (other.gameObject.layer == LayerMask.NameToLayer("Water")) {
             // Get player's bottom center point
             Vector2 playerPoint = new Vector2(playerRb2d.position.x, playerRb2d.position.y - GetComponent<BoxCollider2D>().size.y * 0.5f);
-            // Check if it is still in water after leaving the collider
-            if (other.bounds.Contains(playerPoint)) {
+            // Check if it is still in water(has trigger above) after it stops touching the trigger bounds
+            bool hasWaterTriggerAbove = false;
+            RaycastHit2D[] raycastHits = Physics2D.RaycastAll(playerPoint, Vector2.up);
+           
+            foreach (RaycastHit2D hit in raycastHits) {
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Water")) {
+                    hasWaterTriggerAbove = true;
+                }
+            }
+            
+            if (hasWaterTriggerAbove) {
                 IsInWater = true;
             } else {
                 IsInWater = false;

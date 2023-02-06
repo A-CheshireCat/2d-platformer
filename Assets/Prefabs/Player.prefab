@@ -156,7 +156,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!82 &8632887994032603537
@@ -168,7 +168,7 @@ AudioSource:
   m_GameObject: {fileID: 4138466742664741163}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7536239316908212824, guid: c9e19d38aafece247969e9d31cb98cac, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -298,7 +298,7 @@ MonoBehaviour:
   moveSpeed: 7
   landEffect: {fileID: 4138466742705979006}
   moveEffect: {fileID: 6261180133407196159}
-  jumpForce: 10
+  jumpForce: 11
   jumpPauseTime: 0.1
   groundLayerMask:
     serializedVersion: 2
